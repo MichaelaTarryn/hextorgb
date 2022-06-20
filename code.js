@@ -23,13 +23,23 @@ btnConvert.addEventListener('click',()=>{
     b.innerHTML=parseInt(bluecode,16);
     rgbcode.innerHTML='rgb('+parseInt(redcode,16)+','+parseInt(greencode,16)+','+parseInt(bluecode,16)+')';
     let previewColor='rgb('+parseInt(redcode,16)+','+parseInt(greencode,16)+','+parseInt(bluecode,16)+')';
-    // let hexstring =redcode.toString(16)+greencode.toString(16)+bluecode;
-    // document.querySelector('#hex').innerHTML='#'+hexstring;
-
-    // let previewColor='#'+ hexstring;
 
     preview.style =`background-color: ${previewColor}`;
 
+})
+
+
+const btnClear= document.getElementById('clear');
+btnClear.addEventListener('click',()=>{
+   
+    const inputs = document.querySelector('#hex');
+    inputs.value = '';
+  
+  document.querySelector('#r').innerHTML = "";
+  document.querySelector('#g').innerHTML = "";
+  document.querySelector('#b').innerHTML = "";
+  document.querySelector('#value').innerHTML = "";
+  preview.style = `background-color: #FFFFFF`
 })
 
 
